@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 100%;
+    background-color: #cecece;
+    
+   
+}
+
+#container{
+    width: 90%;
+    margin: auto;
+    background-color: white;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.imagem{
+    max-width: 334px;
+}
+
+/* menu vertical no celular e menu horizontal no desktop => necessário fazer em JS.*/
+
+nav{
+    margin-bottom: 2rem;
+}
+
+nav li{
+    list-style-type: none;
+    background-color: #54cde2;
+    border: 1px solid #069;
+    text-align: center;
+    margin-bottom: 2px;
+    line-height: 30px;
+}
+
+nav li a, a{
+    color: #006;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .94rem;
+    text-decoration: none;
+    display: block;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+    transition-duration: .7s;
+    color: #0000008e;
+}
+
+#coluna1,#coluna2,#coluna3,#coluna4{
+    width: 100%;
+    height: auto;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.26);
+    margin-bottom: 1.4rem;
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+    font-size: .81rem;
+    padding: 1.56rem 1%;
+}
+
+h1{
+    color: #006;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.69rem;
+}
+
+h2{
+    color: #006;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.13rem;
+}
+
+#rodape{
+    background-color: #3891c0;
+    line-height: 1rem;
+}
+
+#rodape p{
+    text-align: center;
+}
+
+/*###############################
+
+Break point - media query
+Coloca o menu de horizontal para vertical
+*/
+
+@media only screen AND (min-width: 480px){
+    nav li{
+        box-sizing: border-box;
+        width: 25%; /* divide a qtd de menus e coloca a % => 4=25%*/
+        float: left;
+    }
+
+    #coluna1{
+        width: 47%; /* corresponde as colunas com img*/
+        margin-right: 6%;
+        float: left;
+    }
+
+    #coluna2{
+        width: 47%;
+        float: left;
+    }
+
+    #coluna3{
+        width: 47%;
+        margin-right: 6%;
+        float: left;
+    }
+
+    #coluna4{
+        width: 47%;
+        float: left;
+    }
+
+    #rodape{
+        clear: both;
+    }
+}
+
+/*###############################
+
+Break point - media query
+Coloca o menu de horizontal para vertical
+*/
+
+@media only screen AND (min-width: 768px){
+
+    #coluna1{
+        width: 20.5%; /* corresponde as colunas com img*/
+        margin-right: 6%;
+        float: left;
+    }
+
+    #coluna2{
+        width: 20.5%; /* corresponde as colunas com img*/
+        margin-right: 6%;
+        float: left;
+    }
+
+    #coluna3{
+        width: 20.5%; /* corresponde as colunas com img*/
+        margin-right:6%;
+        float: left;
+        clear: none;
+    }
+
+    #coluna4{
+        width: 20.5%; /* corresponde as colunas com img*/
+        float: left;
+    }
+}
