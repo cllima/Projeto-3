@@ -42,6 +42,30 @@ nav li{
     line-height: 30px;
 }
 
+/* ############################ sanduiche*/ 
+nav ul{
+    position: relative;
+}
+
+li#icon{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 10%;
+    
+}
+
+nav ul.esconde li:not(:first-child){
+    display: none;
+}
+
+nav ul.mostra li:not(:first-child){
+    display: block;
+}
+
+/* ############################ */
+
 nav li a, a{
     color: #006;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -106,6 +130,11 @@ Coloca o menu de horizontal para vertical
         width: 25%; /* divide a qtd de menus e coloca a % => 4=25%*/
         float: left;
     }
+    /* ############################ Serve para aparecer o contato */
+        nav ul#menu li#icon{
+            display: none;
+        }
+    /* ############################ */
 
     #coluna1{
         width: 47%; /* corresponde as colunas com img*/
