@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="shortcut icon" href="img/HTML5.ico" type="image/x-icon">
+
   <link href="estilo.css" rel="stylesheet" type="text/css">
+  
 
   <title>Design Responsivo - Space Tour</title>
 </head>
@@ -18,14 +20,15 @@
       <img src="img/logo-spacetours.png" alt="Logo Space tours" class="logo">
     </div>
     <nav>
-      <ul id="menu" class="mostra">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Pacotes</a></li>
-        <li><a href="#">Contato</a></li>
-        <li id="icon"><a href="#">&#9776</a></li>
-      </ul>
-  </nav>
+        <ul id="menu" class="esconde">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Pacotes</a></li>
+          <li><a href="#">Contato</a></li>
+          <li id="icon"><a href="javascript:void(0)" id="mostrar">&#9776</a></li>
+        </ul>
+    </nav>
+    
     </header>
       
     <section id="banner">
@@ -84,6 +87,18 @@
       <p>Copyright &copy; Projeto 2021 - by Clayton Lima<br/>
     </footer>
   </div>
+
+  <script>
+    document.querySelector('#mostrar').addEventListener('click',()=>{
+       let menu = document.querySelector('#menu');
+       if(menu.className === 'esconde'){
+           menu.className = 'mostra';
+       }else{
+            menu.className = 'esconde';
+       }
+ 
+    });
+  </script>
  
 </body>
 </html>

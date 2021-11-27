@@ -42,18 +42,22 @@ nav li{
     line-height: 30px;
 }
 
-/* ############################ sanduiche*/ 
+/* ############################ Sanduíche*/ 
 nav ul{
     position: relative;
 }
 
 li#icon{
-    display: inline-block;
+    display: block;
     position: absolute;
     top: 0;
     right: 0;
-    padding: 0 10%;
-    
+    /*padding: 0 10%;*/
+    width: 10%;
+}
+
+li#icon a{
+    display:block;
 }
 
 nav ul.esconde li:not(:first-child){
@@ -131,9 +135,12 @@ Coloca o menu de horizontal para vertical
         float: left;
     }
     /* ############################ Serve para aparecer o contato */
-        nav ul#menu li#icon{
-            display: none;
-        }
+    nav ul#menu li:not(:first-child){
+        display: block;
+    }
+    nav ul#menu li#icon{
+        display:none;
+    }
     /* ############################ */
 
     #coluna1{
